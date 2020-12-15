@@ -74,7 +74,7 @@ class occupancy_mapping_algorithm:
         img.show()
 
         # Plotting the results
-        plt.plot(self.cells, m)
+        plt.step(self.cells,m)
         plt.xlim(0, self.map_length)
         plt.ylim(0, 1.05)
         plt.xlabel("Distance [cm]") 
@@ -87,10 +87,10 @@ class occupancy_mapping_algorithm:
 def main():
 
     # Customize values of the map and sensor
-    pof=0.1
+    pof=0.2
     poo=0.6
-    pinit=0.8
-    meas=np.array([51])
+    pinit=0.5
+    meas=np.array([51,82,85])
     meas_limit=30
     map_res=20
     map_length=100
